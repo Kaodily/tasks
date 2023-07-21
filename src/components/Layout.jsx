@@ -1,5 +1,5 @@
 import React from "react";
-import { Store } from "../store/context/AppContext";
+import {  Store } from "../store/context/AppContext";
 import SideBar from "./layout/SideBar";
 import NoSideBar from "./layout/NoSideBar";
 import Tasks from "./layout/Tasks";

@@ -1,6 +1,6 @@
 import React from "react";
 import showSideBarIcon from "../../assets/icon-show-sidebar.svg";
-import { Store } from "../../store/context/AppContext";
+import {  Store} from "../../store/context/AppContext";
 
 const NoSideBar = () => {
   const { sideBarHandleClick } = Store();

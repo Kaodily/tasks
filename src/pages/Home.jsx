@@ -8,14 +8,23 @@ import React from "react";
 // import Header from "../utils/Header";
 import Layout from "../components/Layout";
 import Header from "../utils/Header";
+import ModalManager from "../utils/modal/ModalManager";
+// import data from '../../data.json'
+// import { Store } from "../store/context/AppContext";
 // import EmptyTask from "../components/dashboard/layout/emptytask/EmptyTask";
 // import { Wrapper } from "../styles/homepage";
 // import Todos from "../components/homepage/Todos";
 
 const Home = () => {
+  
+
+ 
+
+
   return (
     <main className="">
-       <Header />
+      <Header />
+      <ModalManager  />
       <Layout />
     </main>
   );

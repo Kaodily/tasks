@@ -1,5 +1,5 @@
 import React from "react";
-import { Store } from "../store/context/AppContext";
+import {  Store } from "../store/context/AppContext";
 import lightIcon from "../assets/icon-light-theme.svg";
 import darkIcon from "../assets/icon-dark-theme.svg";
 import hideSide from "../assets/icon-hide-sidebar.svg";

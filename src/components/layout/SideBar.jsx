@@ -1,5 +1,5 @@
 import React from "react";
-import { Store } from "../../store/context/AppContext";
+import {  Store} from "../../store/context/AppContext";
 import logolight from "../../assets/logo-light.svg";
 import logodark from "../../assets/logo-dark.svg";
 import NavLinks from "../../utils/NavLinks";

@@ -2,7 +2,7 @@ import React from "react";
 
 const TaskComponent = ({ column }) => {
   return (
-    <div className="mt-3 flex gap-6 p-4">
+    <div className=" grid grid-cols-3  mt-3 gap-6 p-4">
       {column.map((item, index) => {
         const length = item.tasks.length;
         return (
@@ -13,10 +13,9 @@ const TaskComponent = ({ column }) => {
                 const count = task.subtasks.filter(
                   (item) => item.isCompleted === true
                 );
-                console.log(count);
                 return (
                   <div
-                    className="task mb-7 h-max w-[280px] shadow-md rounded-md p-4 "
+                    className="task mb-7 hover:text-[#635fc7] h-max w-[280px] shadow-md rounded-md p-4 "
                     key={index}>
                     <p className="text-sm font-bold  tracking-widest">
                       {task.title}

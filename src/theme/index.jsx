@@ -45,11 +45,10 @@ body{
     background-color: ${({ theme }) => theme.nav};
 
   }
- 
-  @media (min-width: 765px) {
-  
-  }
+ .more_modal{
+  background-color: ${({ theme }) => theme.nav};
 
+ }
 `;
 
 export { GlobalStyles, Themes };

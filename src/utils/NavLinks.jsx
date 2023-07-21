@@ -1,5 +1,5 @@
 import React from "react";
-import { Store } from "../store/context/AppContext";
+import {  Store} from "../store/context/AppContext";
 import { NavLink } from "react-router-dom";
 
 const NavLinks = () => {
@@ -9,7 +9,7 @@ const NavLinks = () => {
   return (
     <article>
       <p className="text-[14px] tracking-widest text-[#828fa3] font-semibold mx-8 my-12 ">
-        ALL BOARD({boards.length})
+        ALL BOARD({boards?.length})
       </p>
       {boards.map((item, index) => {
         const home =

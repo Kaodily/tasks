@@ -4,14 +4,14 @@ import { NavLink } from "react-router-dom";
 
 const NavLinks = () => {
   const { data } = Store();
-  const { boards } = data;
+
 
   return (
     <article>
       <p className="text-[14px] tracking-widest text-[#828fa3] font-semibold mx-8 my-12 ">
-        ALL BOARD({boards?.length})
+        ALL BOARD({data?.length})
       </p>
-      {boards.map((item, index) => {
+      {data.map((item, index) => {
         const home =
           item.name === "Platform Launch"
             ? "/"

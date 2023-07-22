@@ -13,16 +13,16 @@ function AppReducer(state, action) {
       break;
     case "closeModal":
       return { ...state, modal: false };
-    // case "DeleteBoard": {
-    //   const filtered = state?.data?.boards?.filter((item) => {
-    //     return action.payload.id === "/"
-    //       ? item.name !== "Platform Launch"
-    //       : action.payload.id  !== "/Roadmap"
-    //       ? item.name !== "Roadmap"
-    //       : item.name !== "Marketing Plan";
-    //   })
-    //   return { ...state, data: filtered };
-    // }
+    case "DeleteBoard": {
+      const filtered = state?.data?.boards?.filter((item) => {
+        return action.payload.id === "/"
+          ? item.name !== "Platform Launch"
+          : action.payload.id  !== "/Roadmap"
+          ? item.name !== "Roadmap"
+          : item.name !== "Marketing Plan";
+      })
+      return { ...state, data: filtered };
+    }
   }
 }
 export default AppReducer;

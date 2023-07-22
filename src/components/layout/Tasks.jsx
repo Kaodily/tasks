@@ -5,9 +5,9 @@ import TaskComponent from "./TaskComponent";
 
 const Tasks = () => {
   const { data } = Store();
-  const { boards } = data;
+  
   const location = useLocation();
-  const filtered = boards?.filter((item) => {
+  const filtered = data?.filter((item) => {
     return location.pathname === "/"
       ? item.name === "Platform Launch"
       : location.pathname === "/Roadmap"

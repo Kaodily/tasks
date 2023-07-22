@@ -1,14 +1,13 @@
 import React from "react";
-import {  Store} from "../store/context/AppContext";
+import { Store } from "../store/context/AppContext";
 import { NavLink } from "react-router-dom";
 
 const NavLinks = () => {
   const { data } = Store();
 
-
   return (
     <article>
-      <p className="text-[14px] tracking-widest text-[#828fa3] font-semibold mx-8 my-12 ">
+      <p className="mx-8 my-12 text-[14px] font-semibold tracking-widest text-[#828fa3] ">
         ALL BOARD({data?.length})
       </p>
       {data.map((item, index) => {
@@ -20,8 +19,8 @@ const NavLinks = () => {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "flex mt-8 no-underline text-white items-center bg-[#635fc7] w-64 h-[50px]  px-8 py-4 rounded-r-3xl "
-                : "flex items-center mt-8 px-8"
+                ? "mt-8 flex h-[50px] w-64 items-center rounded-r-3xl bg-[#635fc7] px-8  py-4 text-white no-underline "
+                : "mt-8 flex items-center px-8"
             }
             key={index}
             to={home}>
@@ -33,7 +32,7 @@ const NavLinks = () => {
                 />
               </svg>
             </div>
-            <p className="text-sm tracking-widest ml-3 font-bold">
+            <p className="ml-3 text-sm font-bold tracking-widest">
               {item.name}
             </p>
           </NavLink>

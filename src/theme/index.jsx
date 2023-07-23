@@ -37,15 +37,20 @@ body{
   background-color: ${({ theme }) => theme.mode} ;
 
   }
- 
-  .nav_link{
-    
-  }
+
   .task{
     background-color: ${({ theme }) => theme.nav};
 
   }
  .more_modal{
+  background-color: ${({ theme }) => theme.nav};
+
+ }
+ .mobile_modal{
+  background-color: ${({ theme }) => theme.nav};
+
+ }
+ .delete_modal{
   background-color: ${({ theme }) => theme.nav};
 
  }

@@ -1,5 +1,5 @@
 import React from "react";
-import {  Store} from "../../store/context/AppContext";
+import { Store} from "../../store/context/AppContext";
 import logolight from "../../assets/logo-light.svg";
 import logodark from "../../assets/logo-dark.svg";
 import NavLinks from "../../utils/NavLinks";
@@ -15,8 +15,8 @@ const SideBar = () => {
           src={theme ? logodark : logolight}
           alt="company logo"
         />
-        <NavLinks />
-        <div className="flex mt-8 items-center px-8">
+        <NavLinks marginTop={'my-12'} />
+        <div className="flex mt-5 items-center px-8">
           <div>
             <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
               <path

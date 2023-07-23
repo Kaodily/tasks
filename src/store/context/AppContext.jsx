@@ -8,6 +8,12 @@ const initialState = {
   isSidebar: true,
   theme: true,
   modal: false,
+  filtered: "",
+  tasks: {
+    "Platform Launch": true,
+    "Marketing Plan": false,
+    Roadmap: false,
+  },
 };
 const AppContext = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -24,6 +30,9 @@ const AppContext = ({ children }) => {
   const closeModal = () => {
     dispatch({ type: "closeModal" });
   };
+  const changeLink = (id) => {
+    dispatch({ type: "changeLink", payload: { id } });
+  };
   const DeleteBoard = (id) => {
     dispatch({
       type: "DeleteBoard",
@@ -31,6 +40,9 @@ const AppContext = ({ children }) => {
         id,
       },
     });
+  };
+  const filteredTask = (id) => {
+    dispatch({ type: "filteredTask", payload: { id } });
   };
 
   return (
@@ -42,6 +54,8 @@ const AppContext = ({ children }) => {
         openModal,
         closeModal,
         DeleteBoard,
+        changeLink,
+        filteredTask,
       }}>
       {children}
     </Context.Provider>

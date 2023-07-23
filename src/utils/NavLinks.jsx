@@ -1,29 +1,32 @@
 import React from "react";
 import { Store } from "../store/context/AppContext";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
-const NavLinks = () => {
-  const { data } = Store();
+const NavLinks = ({marginTop}) => {
+  const { data, tasks, changeLink } = Store();
+  let isActive = "";
+  for (let item in tasks) {
+    if (tasks[item]) {
+      isActive = item;
+    }
+  }
 
   return (
     <article>
-      <p className="mx-8 my-12 text-[14px] font-semibold tracking-widest text-[#828fa3] ">
+      <p className={`mx-8 ${marginTop} text-[14px] font-semibold tracking-widest text-[#828fa3]`}>
         ALL BOARD({data?.length})
       </p>
       {data.map((item, index) => {
-        const home =
-          item.name === "Platform Launch"
-            ? "/"
-            : `${item.name.replace(" ", "-")}`;
         return (
-          <NavLink
-            className={({ isActive }) =>
-              isActive
-                ? "mt-8 flex h-[50px] w-64 items-center rounded-r-3xl bg-[#635fc7] px-8  py-4 text-white no-underline "
-                : "mt-8 flex items-center px-8"
+          <div
+            className={
+              isActive === item.name
+                ? "mt-5 flex h-[60px] w-64 items-center rounded-r-[30px]   bg-[#635fc7] px-8  py-4 text-white no-underline "
+                : "mt-5 flex items-center px-8"
+        
             }
-            key={index}
-            to={home}>
+            onClick={() => changeLink(item.name)}
+            key={index}>
             <div>
               <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -35,7 +38,7 @@ const NavLinks = () => {
             <p className="ml-3 text-sm font-bold tracking-widest">
               {item.name}
             </p>
-          </NavLink>
+          </div>
         );
       })}
     </article>

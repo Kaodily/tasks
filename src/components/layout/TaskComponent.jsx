@@ -1,8 +1,6 @@
 import React from "react";
-import { Store } from "../../store/context/AppContext";
 
 const TaskComponent = ({ column }) => {
-  const { openModal } = Store();
   return (
     <div className="mt-3 grid grid-cols-3 gap-6 p-4">
       {column.map((item, index) => {

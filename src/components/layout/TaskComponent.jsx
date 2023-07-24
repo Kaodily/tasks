@@ -2,7 +2,7 @@ import React from "react";
 
 const TaskComponent = ({ column }) => {
   return (
-    <div className="mt-3 grid grid-cols-3 gap-6 p-4">
+    <div className="grid grid-cols-3 gap-6 p-4">
       {column.map((item, index) => {
         const length = item.tasks.length;
         const bg =
@@ -25,7 +25,7 @@ const TaskComponent = ({ column }) => {
                 );
                 return (
                   <div
-                    className="task mb-7 h-max w-[280px] rounded-md p-4 shadow-md hover:text-[#635fc7] "
+                    className="task mb-7 h-max w-[300px] rounded-md p-4 shadow-md hover:text-[#635fc7] "
                     key={index}>
                     <p className="text-sm font-bold  tracking-widest">
                       {title}
